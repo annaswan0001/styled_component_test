@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, NavbarContainer, NavLogo ,MobileIcon, NavItem, NavLink, NavMenu} from "./NavbarElements";
+import { Nav, NavbarContainer, NavLogo ,MobileIcon, NavItem, NavLink, NavMenu, NavBtnLink, NavBtn} from "./NavbarElements";
 import {FaBars} from 'react-icons/fa'
 
 export default function Navbar() {
@@ -24,7 +24,11 @@ export default function Navbar() {
               <NavItem>
                   <NavLink to="sign up">Sign up</NavLink>
               </NavItem>
+            
           </NavMenu>
+          <NavBtn>
+                 <NavBtnLink to="/sign-in">Sign in</NavBtnLink>
+              </NavBtn>
         </NavbarContainer>
       </Nav>
     </>
