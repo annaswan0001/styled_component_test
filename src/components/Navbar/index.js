@@ -1,34 +1,47 @@
 import React from "react";
-import { Nav, NavbarContainer, NavLogo ,MobileIcon, NavItem, NavLink, NavMenu, NavBtnLink, NavBtn} from "./NavbarElements";
-import {FaBars} from 'react-icons/fa'
+import {
+  Nav,
+  NavbarContainer,
+  NavLogo,
+  MobileIcon,
+  NavItem,
+  NavLink,
+  NavMenu,
+  NavBtnLink,
+  NavBtn,
+} from "./NavbarElements";
+import { FaBars } from "react-icons/fa";
 
-export default function Navbar() {
+let menu = [
+  { path: "about", text: "About" },
+  { path: "discover", text: "Discover" },
+  { path: "services", text: "Services" },
+  { path: "sign-up", text: "Sign up" },
+];
+
+export default function Navbar({ toggle, isOpen }) {
   return (
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">dolla</NavLogo> 
-          <MobileIcon> 
+          <NavLogo to="/">dolla</NavLogo>
+          <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
-              <NavItem>
-                  <NavLink to="about">About</NavLink>
-              </NavItem>
-              <NavItem>
-                  <NavLink to="discover">Discover</NavLink>
-              </NavItem>
-              <NavItem>
-                  <NavLink to="services">Services</NavLink>
-              </NavItem>
-              <NavItem>
-                  <NavLink to="sign up">Sign up</NavLink>
-              </NavItem>
-            
+            {menu.map((el) => {
+              return (
+                <NavItem  key={el.path}>
+                  <NavLink  to={el.path}>
+                    {el.text}
+                  </NavLink>
+                </NavItem>
+              );
+            })}
           </NavMenu>
           <NavBtn>
-                 <NavBtnLink to="/sign-in">Sign in</NavBtnLink>
-              </NavBtn>
+            <NavBtnLink to="/sign-in">Sign in</NavBtnLink>
+          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>

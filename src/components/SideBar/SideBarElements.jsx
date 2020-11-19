@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 import {Link as LinkS} from 'react-scroll'
 import {Link as LinkR} from 'react-router-dom'
+
 export const SideBarContainer = styled.aside`
   background: #0d0d0d;
   position: fixed;
@@ -14,9 +15,9 @@ export const SideBarContainer = styled.aside`
   display:flex;
   justify-content:center;
   align-items: center;
-  transition: 0.3s ease-in-out;
-  /* opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-  top: ${({ isOpen }) => (isOpen ? "0%" : "-100%")}; */
+  transition: 0.7s ease-in-out;
+  background: ${({ isOpen }) => (isOpen ? "rgba(13,13,13,1)" : "rgba(13,13,13,0)")};
+  top: ${({ isOpen }) => (isOpen ? "0%" : "-100%")};
 `;
 
 export const CloseIcon = styled(FaTimes)`
@@ -42,10 +43,10 @@ export const SideBarMenu = styled.ul`
 flex-direction:column; */
  display:grid;
  grid-template-columns: 1fr;
- grid-template-rows: repeat(6, 80px);
+ grid-template-rows: repeat(4, 80px);
  text-align: center;
  @media screen and (max-width: 480px){
-    grid-template-rows: repeat(6, 65px);
+    grid-template-rows: repeat(4, 65px);
   }
 `
 
