@@ -9,10 +9,10 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   height: 80px;
-  /* margin-top:-80px; */
+  margin-top:-80px;
   z-index: 10;
   font-size: 1rem;
-  background-color: #000;
+  background-color: rgba(0,0,0,0.6);
 
   @media screen and (max-width: 960px) {
     transition: 08s all ease;

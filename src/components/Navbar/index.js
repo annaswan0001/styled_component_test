@@ -15,6 +15,7 @@ import { FaBars } from "react-icons/fa";
 let menu = [
   { path: "about", text: "About" },
   { path: "discover", text: "Discover" },
+  { path: "projects", text: "Projects" },
   { path: "services", text: "Services" },
   { path: "sign-up", text: "Sign up" },
 ];
