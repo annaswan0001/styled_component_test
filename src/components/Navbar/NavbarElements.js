@@ -3,6 +3,8 @@ import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
+  margin:0;
+  padding:0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +14,7 @@ export const Nav = styled.nav`
   margin-top:-80px;
   z-index: 10;
   font-size: 1rem;
-  background-color: rgba(0,0,0,0.6);
+  background-color: ${({scrollNav})=>scrollNav ? "#000" : "transparent"};
 
   @media screen and (max-width: 960px) {
     transition: 08s all ease;

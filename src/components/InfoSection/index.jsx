@@ -44,7 +44,7 @@ export default function Data({
                   duration={5000}
                   smooth={true}
                   spy={true}
-                  to="home"
+                  to="/"
                   dark={dark}
                   offset={-80}
                   primary={primary}

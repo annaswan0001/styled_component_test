@@ -13,7 +13,7 @@ export default function Hero() {
     }
 
   return (
-    <HeroContainer>
+    <HeroContainer id="home">
       <HeroBg>
         <VideoBg src={video} autoPlay loop muted type="video/mp4"></VideoBg>
       </HeroBg>
@@ -28,7 +28,9 @@ export default function Hero() {
                 onMouseLeave= {handleHover} 
                 primary={true}
                 dark={true}
-                to="sign-up">
+                smooth={true} duration={500} spy={true} exact={true} offset={0}
+                to="/">
+                  
                     Get started {hover ? <ArrowForward/> : <ArrowRight/>}
                 </Button>
             </HeroBtnWrapper>
