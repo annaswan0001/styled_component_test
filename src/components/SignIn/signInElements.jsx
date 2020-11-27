@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom'
 
 
 export const Container = styled.section`
-min-height:692px;
+min-height:692px; 
+ /* для телефонов мин высота*/
 position:fixed;
 top:0px;
 left:0px;
@@ -14,7 +15,8 @@ overflow:hidden;
 background:linear-gradient(
     108deg,
      rgba(1,147,86,1) 0%,
-      rgba(10,201,122,1) 100%);
+     rgba(10,201,122,1) 100%);
+
 `
 export const FormWrap = styled.div`
 height:100%;
@@ -23,12 +25,14 @@ flex-direction:column;
 justify-content:center;
 @media screen and (max-width: 400px ){
     height:80%;
+    /* для мобильных чтобы форма красиво смотрелась вверху */
 }
 `
 
 export const Icon = styled(Link)`
 margin-left:32px;
 margin-top:32px;
+margin-bottom:32px;
 text-decoration:none;
 font-size:1.5rem;
 color:#fff;
@@ -36,12 +40,14 @@ font-weight:700px;
 @media screen and (max-width: 400px ){
 margin-left:16px;
 margin-top:8px;
+/* flex-grow:1; */
 }
 `
 
 export const FormContent = styled.div`
 display:flex;
 height:100%;
+/* flex-grow:11; */
 justify-content:center;
 flex-direction:column;
 @media screen and (max-width: 400px ){
@@ -52,6 +58,8 @@ padding:10px;
 export const Form = styled.form`
 background:#010101;
 display:grid;
+/* display:flex;
+flex-direction:column; */
 max-width:400px;
 height:auto;
 width:100%;
@@ -86,7 +94,6 @@ margin-bottom: 32px;
 padding:16px;
 border:none;
 border-radius:4px;
-
 `
 
 export const FormButton = styled.button`

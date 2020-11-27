@@ -10,7 +10,7 @@ export default function SignIn() {
                <FormContent>
                    <Form>
                        <FormH1>
-                      Sign in to your account
+                         Sign in to your account
                        </FormH1>
                        <FormLabel  htmlFor="email">Email</FormLabel>
                        <FormInput type="email" required/>
@@ -20,6 +20,7 @@ export default function SignIn() {
                        <Text>Forgot password</Text>
                    </Form>
                </FormContent>
+     
            </FormWrap>
        </Container>
     )
